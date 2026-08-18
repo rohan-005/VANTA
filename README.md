@@ -56,22 +56,21 @@ VANTA/
 ├── RULES.md             # 15 mandatory design & code rules
 ├── DECISIONS.md         # Technical decision record (Rationale, Trade-offs, AI collaboration)
 ├── README.md            # Project overview & setup instructions
-├── index.html           # Main entry HTML with Google Fonts preloads
+├── index.html           # Main entry HTML with Google Fonts preloads & accessibility links
 ├── package.json         # Dependencies and build scripts
 ├── tailwind.config.js   # Custom Tailwind design tokens (colors, fonts, borders)
 ├── tsconfig.json        # TypeScript strict configuration
 └── src/
     ├── types/           # Product, System, and Spec TypeScript definitions
-    ├── data/            # Hardcoded product specifications & lineup models
+    ├── data/            # Static product specifications & hardware lineup models
     ├── components/
-    │   ├── layout/      # Navbar, Mobile Menu, Footer
+    │   ├── layout/      # Navbar, Mobile Drawer, Footer
     │   ├── hero/        # Hero section & interactive vector chassis renders
     │   ├── product/     # ProductShowcase, CoolingVisualizer, SystemCard
     │   ├── sections/    # Engineering section, SystemsLineup section, BuildCTA
-    │   └── ui/          # Button, Badge, SpecPill, Modal primitives
-    ├── context/         # Configurator state management
+    │   └── ui/          # Button, SectionBadge, SpecPill, Modal primitives
     ├── index.css        # Global CSS directives, font imports, scrollbar styles
-    ├── App.tsx          # Master page composition
+    ├── App.tsx          # Master page composition & scroll-reveal wrappers
     └── main.tsx         # React root mounting
 ```
 
@@ -100,7 +99,7 @@ VANTA/
 * **768px (Tablet)**: Balanced 2-column grid reflow.
 * **1024px (Small Laptop)**: Full multi-column navigation and desktop spec cards.
 * **1440px (Primary Desktop)**: Edge-to-edge section backdrops with 1440px internal container constraints.
-* **Accessibility**: Semantic HTML5 tags, full keyboard focusability, ARIA attributes, and `prefers-reduced-motion` compliance.
+* **Accessibility**: Semantic HTML5 tags, full keyboard focusability, ARIA attributes, skip-to-content link, and `prefers-reduced-motion` compliance.
 
 ---
 
