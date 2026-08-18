@@ -32,8 +32,8 @@ export const App: React.FC = () => {
       {/* Fixed Full-Width Navigation Bar */}
       <Navbar onNavigate={scrollToSection} />
 
-      {/* Main Content Area */}
-      <main className="w-full">
+      {/* Main Content Area with Accessible ID */}
+      <main id="main-content" className="w-full">
         {/* Section 01: Hero */}
         <motion.div
           initial="hidden"
