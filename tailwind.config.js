@@ -8,27 +8,31 @@ export default {
     extend: {
       colors: {
         vanta: {
-          // Light Base Palette
+          // Warm Light Editorial Base Canvas
           ivory: '#F3F0E7',
-          cream: '#F8F6F0',
-          stone: '#E8E3D7',
-          sand: '#C9C5BA',
+          cream: '#FAF8F2',
+          beige: '#E8E2D5',
+          stone: '#DDD6C7',
+          sand: '#C9C3B5',
+          'sand-dark': '#B5AE9E',
           
-          // Dark Contrast Palette
-          charcoal: '#242522',
-          dark: '#171817',
+          // Dark Contrast & Hardware Surface Palette
+          charcoal: '#171717',
+          dark: '#242522',
           black: '#111211',
           border: '#2F312E',
           
-          // Text Colors
-          'text-dark': '#171817',
-          'text-muted-dark': '#6E6D66',
+          // Typography Colors
+          'text-dark': '#171717',
+          'text-heading': '#242522',
+          'text-body': '#4F4D47',
+          'text-muted-dark': '#737067',
           'text-light': '#F3F0E7',
-          'text-muted-light': '#9A9990',
+          'text-muted-light': '#A3A096',
           
-          // Accents (NO BLUE)
+          // Sparing Accent Colors (NO BLUE)
           lime: '#B8E600',
-          'lime-hover': '#C4F000',
+          'lime-hover': '#A0C900',
           'lime-dim': 'rgba(184, 230, 0, 0.15)',
           orange: '#E86F2D',
           'orange-dim': 'rgba(232, 111, 45, 0.15)',
@@ -49,13 +53,11 @@ export default {
       boxShadow: {
         'glow-lime': '0 0 25px rgba(184, 230, 0, 0.25)',
         'glow-lime-sm': '0 0 12px rgba(184, 230, 0, 0.2)',
-        'glow-orange': '0 0 20px rgba(232, 111, 45, 0.25)',
-        'card-sharp': '0 8px 30px -4px rgba(23, 24, 23, 0.12)',
+        'card-warm': '0 8px 30px -4px rgba(23, 23, 23, 0.06)',
+        'card-dark': '0 8px 30px -4px rgba(0, 0, 0, 0.4)',
       },
       backgroundImage: {
-        'grid-pattern': "radial-gradient(circle at 1px 1px, rgba(23, 24, 23, 0.08) 1px, transparent 0)",
-        'grid-pattern-dark': "radial-gradient(circle at 1px 1px, rgba(243, 240, 231, 0.08) 1px, transparent 0)",
-        'line-grid-subtle': "linear-gradient(to right, rgba(23, 24, 23, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(23, 24, 23, 0.04) 1px, transparent 1px)",
+        'line-grid-subtle': "linear-gradient(to right, rgba(23, 23, 23, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(23, 23, 23, 0.04) 1px, transparent 1px)",
         'line-grid-dark': "linear-gradient(to right, rgba(243, 240, 231, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(243, 240, 231, 0.04) 1px, transparent 1px)",
       },
     },

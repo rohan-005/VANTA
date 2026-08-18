@@ -9,13 +9,14 @@
 
   body {
     background-color: #F3F0E7;
-    color: #171817;
+    color: #171717;
     font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Rajdhani', sans-serif;
     letter-spacing: 0.02em;
+    color: #171717;
   }
 }
 
@@ -30,12 +31,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C9C5BA;
+  background: #C9C3B5;
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8E600;
+  background: #171717;
 }
 
 /* Tech Utility Classes */
@@ -45,10 +46,6 @@
 
 .text-glow-lime {
   text-shadow: 0 0 20px rgba(184, 230, 0, 0.4);
-}
-
-.text-glow-orange {
-  text-shadow: 0 0 20px rgba(232, 111, 45, 0.4);
 }
 
 /* Responsive Gutter Strategy (100% Viewport Width) */
