@@ -28,13 +28,13 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-vanta-black text-vanta-text-primary overflow-x-hidden">
+    <div className="min-h-screen bg-vanta-ivory text-vanta-dark overflow-x-hidden">
       {/* Fixed Full-Width Navigation Bar */}
       <Navbar onNavigate={scrollToSection} />
 
-      {/* Main Content Area with Accessible ID */}
+      {/* Main Content Area */}
       <main id="main-content" className="w-full">
-        {/* Section 01: Hero */}
+        {/* Section 01: Hero (Light Warm Ivory) */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -46,7 +46,7 @@ export const App: React.FC = () => {
           />
         </motion.div>
 
-        {/* Section 02: Interactive Product Showcase */}
+        {/* Section 02: Product Showcase (Dark Charcoal) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -56,7 +56,7 @@ export const App: React.FC = () => {
           <ProductShowcase />
         </motion.div>
 
-        {/* Section 03: Thermal & Structural Engineering */}
+        {/* Section 03: Thermal & Structural Engineering (Light Stone) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -66,7 +66,7 @@ export const App: React.FC = () => {
           <Engineering />
         </motion.div>
 
-        {/* Section 04: System Lineup (Core, Pro, Ultra) */}
+        {/* Section 04: System Lineup (Dark Charcoal) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -76,7 +76,7 @@ export const App: React.FC = () => {
           <SystemsLineup onConfigureSystem={() => scrollToSection('build')} />
         </motion.div>
 
-        {/* Section 05: Configurator Call-to-Action */}
+        {/* Section 05: Build CTA (Soft Cream) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -87,7 +87,7 @@ export const App: React.FC = () => {
         </motion.div>
       </main>
 
-      {/* Footer */}
+      {/* Footer (Dark Charcoal) */}
       <Footer />
     </div>
   );

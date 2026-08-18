@@ -15,6 +15,7 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
   onConfigureSystem,
 }) => {
   const [selectedFilter, setSelectedFilter] = useState<'All' | SystemCategory>('All');
+  const [selectedTierId, setSelectedTierId] = useState<string>('vanta-pro');
   const [activeModalSystem, setActiveModalSystem] = useState<System | null>(null);
 
   const filteredSystems = VANTA_SYSTEMS.filter((sys) => {
@@ -36,35 +37,35 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
   return (
     <section
       id="systems"
-      className="relative w-full py-20 lg:py-32 bg-vanta-dark border-b border-vanta-border overflow-hidden"
+      className="relative w-full py-20 lg:py-32 bg-vanta-dark border-b border-vanta-border overflow-hidden text-vanta-ivory"
     >
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 bg-line-grid-subtle opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-line-grid-dark opacity-20 pointer-events-none" />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+      <div className="w-full gutter-padding relative z-10 space-y-12">
         
         {/* Section Header & Tier Filter */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4">
-            <SectionBadge number="04" label="HARDWARE LINEUP" />
-            <h2 className="text-3xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-vanta-text-primary">
+            <SectionBadge number="04" label="HARDWARE LINEUP" theme="dark" />
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-vanta-ivory">
               SYSTEM <span className="text-vanta-lime">LINEUP</span>
             </h2>
-            <p className="text-base text-vanta-text-muted font-sans max-w-xl">
-              Three hand-benched hardware tiers configured around frame rates, target resolution, and workstation memory capacity.
+            <p className="text-base text-vanta-text-muted-light font-sans max-w-xl">
+              Three hand-benched hardware tiers configured around frame rates, target resolution, and workstation memory capacity. Select a system to inspect hardware parameters.
             </p>
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex items-center gap-2 bg-vanta-surface p-1.5 rounded-sm border border-vanta-border self-start md:self-auto">
+          <div className="flex items-center gap-2 bg-vanta-charcoal p-1.5 rounded-sm border border-vanta-border self-start md:self-auto">
             {(['All', 'Core', 'Pro', 'Ultra'] as const).map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedFilter(category)}
                 className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
                   selectedFilter === category
-                    ? 'bg-vanta-lime text-vanta-black font-semibold'
-                    : 'text-vanta-text-muted hover:text-vanta-text-primary'
+                    ? 'bg-vanta-lime text-vanta-dark font-bold'
+                    : 'text-vanta-text-muted-light hover:text-vanta-ivory'
                 }`}
               >
                 {category === 'All' ? 'ALL RIGS' : category}
@@ -79,6 +80,8 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
             <SystemCard
               key={system.id}
               system={system}
+              isSelected={selectedTierId === system.id}
+              onSelectTier={(id) => setSelectedTierId(id)}
               onConfigure={handleConfigure}
               onViewSpecs={(sys) => setActiveModalSystem(sys)}
             />
@@ -97,10 +100,10 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
         >
           <div className="space-y-6">
             <div className="p-4 bg-vanta-dark border border-vanta-border rounded-sm">
-              <span className="font-mono text-[10px] text-vanta-lime uppercase tracking-widest block mb-1">
+              <span className="font-mono text-[10px] text-vanta-lime uppercase tracking-widest block mb-1 font-bold">
                 SYSTEM SUMMARY
               </span>
-              <p className="font-sans text-xs text-vanta-text-primary">
+              <p className="font-sans text-xs text-vanta-ivory">
                 {activeModalSystem.description}
               </p>
             </div>
@@ -111,18 +114,18 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
               </h4>
 
               <div className="space-y-2">
-                <SpecPill label="PROCESSOR (CPU)" value={activeModalSystem.specifications.cpu} highlight />
-                <SpecPill label="GRAPHICS (GPU)" value={activeModalSystem.specifications.gpu} highlight />
-                <SpecPill label="SYSTEM MEMORY (RAM)" value={activeModalSystem.specifications.memory} />
-                <SpecPill label="NVMe STORAGE" value={activeModalSystem.specifications.storage} />
-                <SpecPill label="LIQUID COOLER" value={activeModalSystem.specifications.cooling} />
-                <SpecPill label="POWER DELIVERY" value={activeModalSystem.specifications.powerSupply} />
-                <SpecPill label="MOTHERBOARD" value={activeModalSystem.specifications.motherboard} />
-                <SpecPill label="CHASSIS ENCLOSURE" value={activeModalSystem.specifications.chassis} />
+                <SpecPill label="PROCESSOR (CPU)" value={activeModalSystem.specifications.cpu} highlight theme="dark" />
+                <SpecPill label="GRAPHICS (GPU)" value={activeModalSystem.specifications.gpu} highlight theme="dark" />
+                <SpecPill label="SYSTEM MEMORY (RAM)" value={activeModalSystem.specifications.memory} theme="dark" />
+                <SpecPill label="NVMe STORAGE" value={activeModalSystem.specifications.storage} theme="dark" />
+                <SpecPill label="LIQUID COOLER" value={activeModalSystem.specifications.cooling} theme="dark" />
+                <SpecPill label="POWER DELIVERY" value={activeModalSystem.specifications.powerSupply} theme="dark" />
+                <SpecPill label="MOTHERBOARD" value={activeModalSystem.specifications.motherboard} theme="dark" />
+                <SpecPill label="CHASSIS ENCLOSURE" value={activeModalSystem.specifications.chassis} theme="dark" />
               </div>
             </div>
 
-            <div className="pt-4 border-t border-vanta-border flex items-center justify-between text-xs font-mono text-vanta-text-muted">
+            <div className="pt-4 border-t border-vanta-border flex items-center justify-between text-xs font-mono text-vanta-text-muted-light">
               <span>TARGET RESOLUTION: [{activeModalSystem.targetResolution}]</span>
               <span>PEAK POWER: [{activeModalSystem.estimatedPowerDraw}]</span>
             </div>
