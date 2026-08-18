@@ -4,47 +4,47 @@ These 15 rules are mandatory for all components, styles, data structures, and do
 
 ---
 
-### Rule 01 — 100% Viewport Width Composition
-Visual section backdrops, dividers, hero grids, and structural containers must extend to the full available viewport width (`width: 100%`). Never build a narrow boxed website isolated inside giant empty side margins (`max-w-1200px margin: auto`). Use internal responsive gutters (`px-5 sm:px-10 lg:px-16 xl:px-20`) strictly for content readability.
+### Rule 01 — Dominant Light Primary Background (Warm Ivory Canvas)
+The primary visual environment must be a warm light background (`#F3F0E7` / `#FAF8F2`). The initial page load must visibly read as **LIGHT**. Dark sections are reserved strictly for contrast sections (e.g. Product Showcase).
 
-### Rule 02 — Strict Zero-Blue Policy
-No blue color may be used anywhere in the visual system. That includes blue backgrounds, blue gradients, cyan accents, navy overlays, blue glows, blue shadows, blue borders, blue buttons, or blue airflow vector lines.
+### Rule 02 — Dark Editorial Typography
+Display headlines, section titles, product titles, and body paragraphs must use **DARK CHARCOAL (`#171717` / `#242522`)** on light section backgrounds. Never render entire headings or body copy in lime green.
 
-### Rule 03 — Light Warm Base Palette with Section Rhythm
-The primary design aesthetic is built on warm ivory (`#F3F0E7`), soft cream (`#F8F6F0`), and light stone (`#E8E3D7`), alternating with deep charcoal (`#171817` / `#242522`) hardware inspection zones to create rhythm and prevent visual monotony.
+### Rule 03 — Sparing Accent Color (Acid Lime `#B8E600`)
+Use **Acid Lime (`#B8E600`)** strictly as a high-contrast accent for CTAs, active tab indicators, hover states, and live LED dots (~5% visual area). Never paint large background areas or cards in lime.
 
-### Rule 04 — Acid Green (`#B8E600`) & Burnt Orange (`#E86F2D`) Accents
-Use **Acid Green (`#B8E600`)** strictly as the primary accent color on CTAs, active tab indicators, live status LED dots, and selected hardware highlights. Use **Burnt Orange (`#E86F2D`)** as a secondary thermal accent for exhaust vectors and peak power callouts.
+### Rule 04 — Elimination of Dashboard & Terminal HUD Aesthetics
+Remove visual reliance on developer dashboards, terminal interfaces, or diagnostic software tags (`[01]`, `SILICON_BENCH`, `GPU BUS`). Present hardware using clean editorial typography, sharp geometric framing, and generous whitespace.
 
-### Rule 05 — Sharp Corner Geometry & Thin Engineered Borders
-Do not build bubbly or rounded-3xl container cards. Prefer sharp corners (`rounded-none`), 2px (`rounded-sm`), or max 4px (`rounded`) corner radii paired with thin geometric borders (`border-vanta-sand` or `border-vanta-border`).
+### Rule 05 — Product-First Presentation
+The gaming desktop chassis render must be the visual hero. Present hardware like a luxury product campaign object with clean shadows, warm lighting, and clear specification callouts.
 
-### Rule 06 — Never Fabricate Credibility
+### Rule 06 — 100% Viewport Width Strategy
+Section backdrops, dividers, and headers must stretch edge-to-edge across `100vw`. Never build a narrow boxed website inside giant empty side margins. Use responsive internal gutters (`px-5 sm:px-10 lg:px-16 xl:px-20`) for content readability.
+
+### Rule 07 — Strict Zero-Blue Policy
+No blue color may be used anywhere in the visual system. Cold air intake vectors use **Emerald Green (`#00FF99`)**, while hot exhaust vectors use **Warm Burnt Orange (`#E86F2D`)**.
+
+### Rule 08 — Sharp Corner Geometry & Warm Sand Borders
+Avoid bubbly rounded container cards (`rounded-2xl`, `rounded-3xl`). Use sharp corners (`rounded-none`), 2px (`rounded-sm`), or max 4px (`rounded`) corner radii paired with subtle warm sand borders (`#C9C3B5`).
+
+### Rule 09 — Never Fabricate Credibility
 Never include fake customer reviews, fabricated user counts, fake press badges, false partner logos, or invented industry awards. Credibility is built through clean design, hardware transparency, and high craft.
 
-### Rule 07 — Restrained Motion with Purpose
+### Rule 10 — Restrained Motion with Purpose
 Animations must serve a clear function: guiding focus during scroll reveals, providing feedback on hover/active states, or illustrating airflow vectors. Never add bouncing, excessive 3D spinning, or continuous distracting floating elements.
 
-### Rule 08 — Zero Placeholder Lorem Ipsum
+### Rule 11 — Zero Placeholder Lorem Ipsum
 All copy across hero titles, section descriptions, hardware spec lists, and modal details must be real, coherent, engineering-driven text written specifically for VANTA hardware.
 
-### Rule 09 — Zero Fake Statistics or Benchmarks
-Describe hardware capabilities honestly using real component specifications (e.g. `24-Core Intel Core i9-14900KS`, `24GB GDDR6X VRAM`, `Hand-benched dual-chamber airflow`) rather than making up comparison percentages.
+### Rule 12 — Zero Fake Statistics or Benchmarks
+Describe hardware capabilities honestly using real component specifications (e.g. `Intel Core i9-14900KS`, `RTX 4090 24GB`, `Dual-Chamber Liquid Cooling`) rather than making up comparison percentages.
 
-### Rule 10 — Zero Horizontal Overflow
+### Rule 13 — Zero Horizontal Overflow
 The layout must maintain `overflow-x-hidden` on global containers and ensure zero horizontal scrolling or clipping across all viewports from **390px** mobile up to **1440px+** ultra-wide displays.
 
-### Rule 11 — Semantic HTML Structure
+### Rule 14 — Semantic HTML Structure
 Use proper HTML5 semantic markup: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<button>`, and `<h1>` through `<h3>`. Never replace semantic buttons or links with unaccessible `<div>` elements missing keyboard events.
 
-### Rule 12 — Editorial Product Presentation
-Treat product graphics as editorial showroom objects. Support them with clear technical annotations, dynamic lighting highlights, and structured specification breakdowns.
-
-### Rule 13 — Selective Display Typography
-Use display typography (`Rajdhani` / bold display face) selectively for main headlines, major section headings, and system model titles. Body text, navigation links, button copy, and product specifications must use clean sans-serif (`Inter`).
-
-### Rule 14 — Pixel Monospace as Accents Only
-Use technical monospace fonts (`JetBrains Mono` / `Space Mono`) sparingly for tiny system indicators, bracketed technical tags (`[ SYS_01 ]`), and metadata labels. Pixel/mono fonts must never be used for body paragraphs or main navigation menus.
-
-### Rule 15 — Mobile 390px as First-Class Target
+### Rule 15 — Mobile 390px Compliance
 Every layout, menu drawer, button tap target, and product view must be designed and explicitly verified for 390px mobile viewports without horizontal overflow.
