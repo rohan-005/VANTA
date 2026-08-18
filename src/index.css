@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light dark;
   }
 
   body {
-    background-color: #070708;
-    color: #F3F4F6;
+    background-color: #F3F0E7;
+    color: #171817;
     font-family: 'Inter', sans-serif;
   }
 
@@ -21,35 +21,59 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #070708;
+  background: #F3F0E7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222631;
+  background: #C9C5BA;
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #CCFF00;
+  background: #B8E600;
 }
 
 /* Tech Utility Classes */
 .clip-tech-corner {
-  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-}
-
-.bg-line-grid-subtle {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
 }
 
 .text-glow-lime {
-  text-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+  text-shadow: 0 0 20px rgba(184, 230, 0, 0.4);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(232, 111, 45, 0.4);
+}
+
+/* Responsive Gutter Strategy (100% Viewport Width) */
+.gutter-padding {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .gutter-padding {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gutter-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .gutter-padding {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
