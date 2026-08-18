@@ -40,11 +40,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     >
       <div className="w-full gutter-padding flex items-center justify-between">
         
-        {/* Brand Wordmark */}
+        {/* Brand Wordmark & Category Indicator */}
         <button
           onClick={() => handleNavClick('hero')}
           className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-vanta-dark rounded-sm"
-          aria-label="VANTA Homepage"
+          aria-label="VANTA Gaming PCs Homepage"
         >
           <div className="w-9 h-9 bg-vanta-dark border border-vanta-dark group-hover:border-vanta-lime flex items-center justify-center rounded-sm transition-colors shadow-sm">
             <span className="font-display font-extrabold text-xl text-vanta-lime">V</span>
@@ -53,45 +53,45 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             <span className="font-display font-extrabold text-2xl tracking-wider text-vanta-dark group-hover:text-vanta-lime transition-colors leading-none">
               VANTA
             </span>
-            <span className="font-mono text-[9px] uppercase tracking-widest text-vanta-text-muted-dark mt-0.5 flex items-center gap-1 font-semibold">
+            <span className="font-mono text-[9px] uppercase tracking-widest text-vanta-text-muted-dark mt-0.5 flex items-center gap-1 font-bold">
               <span className="w-1.5 h-1.5 rounded-full bg-vanta-lime animate-pulse" />
-              SYSTEMS // LABS
+              GAMING PCs
             </span>
           </div>
         </button>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Clear Navigation Links */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Desktop Navigation">
           <button
-            onClick={() => handleNavClick('showcase')}
+            onClick={() => handleNavClick('systems')}
             className="text-xs font-mono font-bold uppercase tracking-widest text-vanta-text-body hover:text-vanta-dark transition-colors flex items-center gap-1.5 focus:outline-none"
           >
-            SHOWCASE
+            Gaming PCs
           </button>
 
           <button
             onClick={() => handleNavClick('engineering')}
             className="text-xs font-mono font-bold uppercase tracking-widest text-vanta-text-body hover:text-vanta-dark transition-colors flex items-center gap-1.5 focus:outline-none"
           >
-            ENGINEERING
-          </button>
-
-          <button
-            onClick={() => handleNavClick('systems')}
-            className="text-xs font-mono font-bold uppercase tracking-widest text-vanta-text-body hover:text-vanta-dark transition-colors flex items-center gap-1.5 focus:outline-none"
-          >
-            SYSTEMS
+            Technology
           </button>
 
           <button
             onClick={() => handleNavClick('build')}
             className="text-xs font-mono font-bold uppercase tracking-widest text-vanta-text-body hover:text-vanta-dark transition-colors flex items-center gap-1.5 focus:outline-none"
           >
-            BUILD
+            Custom Builder
+          </button>
+
+          <button
+            onClick={() => handleNavClick('showcase')}
+            className="text-xs font-mono font-bold uppercase tracking-widest text-vanta-text-body hover:text-vanta-dark transition-colors flex items-center gap-1.5 focus:outline-none"
+          >
+            About VANTA
           </button>
         </nav>
 
-        {/* Desktop Action CTA */}
+        {/* Desktop Clear Product CTA */}
         <div className="hidden md:flex items-center gap-4">
           <Button
             variant="outline"
@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             onClick={() => handleNavClick('systems')}
             icon={<ArrowUpRight className="w-3.5 h-3.5" />}
           >
-            EXPLORE SYSTEMS
+            EXPLORE GAMING PCs
           </Button>
         </div>
 
@@ -118,41 +118,41 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       {isMobileOpen && (
         <div className="md:hidden w-full bg-vanta-cream/98 border-b border-vanta-sand backdrop-blur-xl px-5 py-6 shadow-2xl transition-all">
           <div className="flex flex-col gap-4">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-vanta-text-muted-dark px-2 pb-2 border-b border-vanta-sand flex items-center justify-between">
-              <span>NAVIGATION</span>
-              <span className="text-vanta-dark font-bold">● ACTIVE</span>
+            <div className="font-mono text-[10px] uppercase tracking-widest text-vanta-text-muted-dark px-2 pb-2 border-b border-vanta-sand flex items-center justify-between font-bold">
+              <span>PREMIUM GAMING PCs</span>
+              <span className="text-vanta-dark font-bold">● ONLINE</span>
             </div>
 
             <button
-              onClick={() => handleNavClick('showcase')}
+              onClick={() => handleNavClick('systems')}
               className="flex items-center justify-between p-3.5 rounded-sm bg-vanta-ivory border border-vanta-sand text-vanta-dark font-bold hover:border-vanta-dark text-left"
             >
-              <span className="font-mono text-xs uppercase tracking-widest">PRODUCT SHOWCASE</span>
-              <Cpu className="w-4 h-4 text-vanta-dark" />
+              <span className="font-mono text-xs uppercase tracking-widest">GAMING SYSTEMS</span>
+              <Sliders className="w-4 h-4 text-vanta-dark" />
             </button>
 
             <button
               onClick={() => handleNavClick('engineering')}
               className="flex items-center justify-between p-3.5 rounded-sm bg-vanta-ivory border border-vanta-sand text-vanta-dark font-bold hover:border-vanta-dark text-left"
             >
-              <span className="font-mono text-xs uppercase tracking-widest">THERMAL ENGINEERING</span>
+              <span className="font-mono text-xs uppercase tracking-widest">THERMAL TECHNOLOGY</span>
               <Shield className="w-4 h-4 text-vanta-dark" />
-            </button>
-
-            <button
-              onClick={() => handleNavClick('systems')}
-              className="flex items-center justify-between p-3.5 rounded-sm bg-vanta-ivory border border-vanta-sand text-vanta-dark font-bold hover:border-vanta-dark text-left"
-            >
-              <span className="font-mono text-xs uppercase tracking-widest">SYSTEM LINEUP</span>
-              <Sliders className="w-4 h-4 text-vanta-dark" />
             </button>
 
             <button
               onClick={() => handleNavClick('build')}
               className="flex items-center justify-between p-3.5 rounded-sm bg-vanta-ivory border border-vanta-sand text-vanta-dark font-bold hover:border-vanta-dark text-left"
             >
-              <span className="font-mono text-xs uppercase tracking-widest">CUSTOM BUILDER</span>
+              <span className="font-mono text-xs uppercase tracking-widest">CUSTOM SYSTEM BUILDER</span>
               <Info className="w-4 h-4 text-vanta-dark" />
+            </button>
+
+            <button
+              onClick={() => handleNavClick('showcase')}
+              className="flex items-center justify-between p-3.5 rounded-sm bg-vanta-ivory border border-vanta-sand text-vanta-dark font-bold hover:border-vanta-dark text-left"
+            >
+              <span className="font-mono text-xs uppercase tracking-widest">HARDWARE SHOWCASE</span>
+              <Cpu className="w-4 h-4 text-vanta-dark" />
             </button>
 
             <div className="pt-2">
@@ -163,7 +163,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                 onClick={() => handleNavClick('systems')}
                 icon={<ArrowUpRight className="w-4 h-4" />}
               >
-                EXPLORE ALL SYSTEMS
+                EXPLORE ALL GAMING PCs
               </Button>
             </div>
           </div>
