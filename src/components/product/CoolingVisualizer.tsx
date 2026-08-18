@@ -18,14 +18,14 @@ export const CoolingVisualizer: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-vanta-cream border border-vanta-sand rounded-sm p-6 sm:p-8 space-y-8 shadow-sm">
+    <div className="w-full bg-vanta-cream border border-vanta-sand rounded-sm p-6 sm:p-8 space-y-8 shadow-card-warm">
       {/* Top Header & Simulation Controls */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-vanta-sand pb-6">
         <div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-vanta-dark animate-pulse" />
-            <span className="font-mono text-xs uppercase tracking-widest text-vanta-text-muted-dark font-semibold">
-              THERMAL_SIMULATOR // DUAL-CHAMBER FLOW
+            <span className="font-mono text-xs uppercase tracking-widest text-vanta-text-body font-bold">
+              THERMAL SIMULATION // DUAL-CHAMBER FLOW
             </span>
           </div>
           <h3 className="text-2xl font-display font-extrabold uppercase tracking-wide text-vanta-dark mt-1">
@@ -35,35 +35,35 @@ export const CoolingVisualizer: React.FC = () => {
 
         {/* Fan Speed Mode Toggles */}
         <div className="flex items-center gap-2 bg-vanta-ivory p-1 rounded-sm border border-vanta-sand">
-          <span className="font-mono text-[10px] text-vanta-text-muted-dark px-2 uppercase font-semibold">
+          <span className="font-mono text-[10px] text-vanta-text-body px-2 uppercase font-bold">
             FAN PROFILE:
           </span>
           <button
             onClick={() => setFanSpeed('quiet')}
-            className={`px-2.5 py-1 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
+            className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
               fanSpeed === 'quiet'
                 ? 'bg-vanta-dark text-vanta-lime font-bold'
-                : 'text-vanta-text-muted-dark hover:text-vanta-dark'
+                : 'text-vanta-text-body hover:text-vanta-dark'
             }`}
           >
             QUIET
           </button>
           <button
             onClick={() => setFanSpeed('balanced')}
-            className={`px-2.5 py-1 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
+            className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
               fanSpeed === 'balanced'
                 ? 'bg-vanta-lime text-vanta-dark font-bold shadow-sm'
-                : 'text-vanta-text-muted-dark hover:text-vanta-dark'
+                : 'text-vanta-text-body hover:text-vanta-dark'
             }`}
           >
             BALANCED
           </button>
           <button
             onClick={() => setFanSpeed('extreme')}
-            className={`px-2.5 py-1 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
+            className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
               fanSpeed === 'extreme'
                 ? 'bg-vanta-dark text-vanta-lime font-bold'
-                : 'text-vanta-text-muted-dark hover:text-vanta-dark'
+                : 'text-vanta-text-body hover:text-vanta-dark'
             }`}
           >
             MAX FLOW
@@ -71,12 +71,12 @@ export const CoolingVisualizer: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Vector Airflow Visual Container (Dark Canvas Contrast) */}
-      <div className="relative w-full aspect-[16/9] min-h-[280px] bg-vanta-dark border border-vanta-charcoal rounded-sm p-4 overflow-hidden flex flex-col justify-between shadow-inner">
+      {/* Vector Airflow Visual Container (Dark Canvas Contrast inside light card) */}
+      <div className="relative w-full aspect-[16/9] min-h-[280px] bg-vanta-charcoal border border-vanta-dark rounded-sm p-4 overflow-hidden flex flex-col justify-between shadow-inner">
         {/* Background Subtle Grid */}
         <div className="absolute inset-0 bg-line-grid-dark opacity-30 pointer-events-none" />
 
-        {/* SVG Thermal Flow Diagram (ZERO BLUE - Emerald Green Intakes & Burnt Orange Exhausts) */}
+        {/* SVG Thermal Flow Diagram (ZERO BLUE - Emerald Intake & Burnt Orange Exhaust) */}
         <svg viewBox="0 0 800 400" className="w-full h-full relative z-10" fill="none">
           {/* Chassis Boundary Outline */}
           <rect x="100" y="40" width="600" height="320" rx="4" fill="#111211" stroke="#2F312E" strokeWidth="2" />
@@ -85,15 +85,14 @@ export const CoolingVisualizer: React.FC = () => {
           <line x1="100" y1="290" x2="700" y2="290" stroke="#3A3C37" strokeWidth="2" strokeDasharray="4 4" />
 
           {/* Chamber Labels */}
-          <text x="120" y="70" fill="#9A9990" fontSize="11" fontFamily="JetBrains Mono">
-            [ PRIMARY MAIN HARDWARE CHAMBER ]
+          <text x="120" y="70" fill="#A3A096" fontSize="11" fontFamily="JetBrains Mono">
+            PRIMARY HARDWARE CHAMBER
           </text>
-          <text x="120" y="320" fill="#9A9990" fontSize="11" fontFamily="JetBrains Mono">
-            [ ISOLATED REAR PSU & DRIVE ZONE ]
+          <text x="120" y="320" fill="#A3A096" fontSize="11" fontFamily="JetBrains Mono">
+            ISOLATED REAR PSU BAY
           </text>
 
           {/* Hardware Components Render */}
-          {/* Motherboard & CPU Block */}
           <rect x="250" y="100" width="120" height="120" rx="2" fill="#1F201D" stroke="#3A3C37" strokeWidth="1.5" />
           <rect x="280" y="130" width="60" height="60" fill="#2A2B27" stroke="#B8E600" strokeWidth="1.5" />
           <text x="290" y="165" fill="#B8E600" fontSize="10" fontFamily="Rajdhani" fontWeight="bold">
@@ -106,14 +105,14 @@ export const CoolingVisualizer: React.FC = () => {
             GPU COPPER VAPOR MATRIX
           </text>
 
-          {/* Front Intake Fans (Left Side) */}
+          {/* Front Intake Fans */}
           <g>
             <circle cx="100" cy="110" r="16" fill="#242522" stroke="#3E403B" strokeWidth="2" />
             <circle cx="100" cy="190" r="16" fill="#242522" stroke="#3E403B" strokeWidth="2" />
             <circle cx="100" cy="270" r="16" fill="#242522" stroke="#3E403B" strokeWidth="2" />
           </g>
 
-          {/* Dynamic Cold Air Flow Paths (Emerald Green #00FF99 - ZERO BLUE) */}
+          {/* Dynamic Cold Air Flow Paths (Emerald Green #00FF99) */}
           <path
             d="M50 110 C150 110, 200 160, 280 160"
             stroke="#00FF99"
@@ -156,29 +155,29 @@ export const CoolingVisualizer: React.FC = () => {
           <circle cx="450" cy="40" r="16" fill="#242522" stroke="#3E403B" strokeWidth="2" />
           <circle cx="550" cy="40" r="16" fill="#242522" stroke="#3E403B" strokeWidth="2" />
 
-          {/* Feature Highlight Callout Pins */}
+          {/* Feature Pins */}
           <g onClick={() => setActiveFeatureId('chamber-isolation')} className="cursor-pointer group">
             <circle cx="120" cy="320" r="10" fill="#171817" stroke={activeFeatureId === 'chamber-isolation' ? '#B8E600' : '#4A4C46'} strokeWidth="2" />
-            <text x="117" y="324" fill={activeFeatureId === 'chamber-isolation' ? '#B8E600' : '#9A9990'} fontSize="10" fontFamily="JetBrains Mono" fontWeight="bold">1</text>
+            <text x="117" y="324" fill={activeFeatureId === 'chamber-isolation' ? '#B8E600' : '#A3A096'} fontSize="10" fontFamily="JetBrains Mono" fontWeight="bold">1</text>
           </g>
 
           <g onClick={() => setActiveFeatureId('negative-pressure')} className="cursor-pointer group">
             <circle cx="100" cy="150" r="10" fill="#171817" stroke={activeFeatureId === 'negative-pressure' ? '#B8E600' : '#4A4C46'} strokeWidth="2" />
-            <text x="97" y="154" fill={activeFeatureId === 'negative-pressure' ? '#B8E600' : '#9A9990'} fontSize="10" fontFamily="JetBrains Mono" fontWeight="bold">2</text>
+            <text x="97" y="154" fill={activeFeatureId === 'negative-pressure' ? '#B8E600' : '#A3A096'} fontSize="10" fontFamily="JetBrains Mono" fontWeight="bold">2</text>
           </g>
 
           <g onClick={() => setActiveFeatureId('copper-plate')} className="cursor-pointer group">
             <circle cx="310" cy="160" r="10" fill="#171817" stroke={activeFeatureId === 'copper-plate' ? '#B8E600' : '#4A4C46'} strokeWidth="2" />
-            <text x="307" y="164" fill={activeFeatureId === 'copper-plate' ? '#B8E600' : '#9A9990'} fontSize="10" fontFamily="JetBrains Mono" fontWeight="bold">3</text>
+            <text x="307" y="164" fill={activeFeatureId === 'copper-plate' ? '#B8E600' : '#A3A096'} fontSize="10" fontFamily="JetBrains Mono" fontWeight="bold">3</text>
           </g>
         </svg>
 
-        {/* Floating Simulation Status Bar */}
-        <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between px-3 py-1.5 bg-vanta-charcoal/90 border border-vanta-border rounded-sm backdrop-blur-md text-[11px] font-mono">
+        {/* Status Bar */}
+        <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between px-3.5 py-2 bg-vanta-dark/90 border border-vanta-border rounded-sm backdrop-blur-md text-[11px] font-mono">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsSimulating(!isSimulating)}
-              className="p-1 text-vanta-lime hover:bg-vanta-dark rounded-sm"
+              className="p-1 text-vanta-lime hover:bg-vanta-charcoal rounded-sm"
               title={isSimulating ? "Pause Simulation" : "Play Simulation"}
             >
               {isSimulating ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
@@ -187,7 +186,7 @@ export const CoolingVisualizer: React.FC = () => {
           </div>
 
           <span className="text-vanta-lime hidden sm:inline font-bold">
-            AIRFLOW VECTOR: EMERALD INTAKE // BURNT ORANGE EXHAUST
+            EMERALD INTAKE // BURNT ORANGE EXHAUST
           </span>
         </div>
       </div>
@@ -200,24 +199,21 @@ export const CoolingVisualizer: React.FC = () => {
             <button
               key={feature.id}
               onClick={() => setActiveFeatureId(feature.id)}
-              className={`p-4 rounded-sm border text-left transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-vanta-lime ${
+              className={`p-4 rounded-sm border text-left transition-all focus:outline-none ${
                 isActive
-                  ? 'bg-vanta-dark border-vanta-dark text-vanta-ivory shadow-md'
+                  ? 'bg-vanta-dark border-vanta-dark text-vanta-ivory shadow-md font-bold'
                   : 'bg-vanta-ivory border-vanta-sand text-vanta-dark hover:border-vanta-dark'
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className={`font-mono text-[10px] uppercase font-bold ${isActive ? 'text-vanta-lime' : 'text-vanta-text-muted-dark'}`}>
-                  [{feature.tag}]
-                </span>
-                <span className="font-mono text-[10px] opacity-70">
+                <span className={`font-mono text-[10px] uppercase font-bold ${isActive ? 'text-vanta-lime' : 'text-vanta-text-body'}`}>
                   0{index + 1}
                 </span>
               </div>
-              <h4 className="font-display font-bold text-sm uppercase mt-2">
+              <h4 className="font-display font-extrabold text-sm uppercase mt-2">
                 {feature.title}
               </h4>
-              <p className={`font-sans text-xs mt-1 line-clamp-2 ${isActive ? 'text-vanta-text-muted-light' : 'text-vanta-text-muted-dark'}`}>
+              <p className={`font-sans text-xs mt-1 line-clamp-2 ${isActive ? 'text-vanta-text-muted-light' : 'text-vanta-text-body'}`}>
                 {feature.subtitle}
               </p>
               <div className="pt-3 mt-3 border-t border-vanta-sand/60 flex items-center justify-between text-xs font-mono">
@@ -237,7 +233,7 @@ export const CoolingVisualizer: React.FC = () => {
           </div>
           <div>
             <span className="font-mono text-[10px] uppercase text-vanta-lime tracking-widest font-bold">
-              SELECTED FEATURE IN-DEPTH // {activeFeature.tag}
+              FEATURE DETAILS // {activeFeature.tag}
             </span>
             <h4 className="font-display font-bold text-lg uppercase text-vanta-ivory mt-1">
               {activeFeature.title}

@@ -37,35 +37,35 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
   return (
     <section
       id="systems"
-      className="relative w-full py-20 lg:py-32 bg-vanta-dark border-b border-vanta-border overflow-hidden text-vanta-ivory"
+      className="relative w-full py-20 lg:py-32 bg-vanta-ivory border-b border-vanta-sand overflow-hidden text-vanta-dark"
     >
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 bg-line-grid-dark opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-line-grid-subtle opacity-40 pointer-events-none" />
 
       <div className="w-full gutter-padding relative z-10 space-y-12">
         
         {/* Section Header & Tier Filter */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4">
-            <SectionBadge number="04" label="HARDWARE LINEUP" theme="dark" />
-            <h2 className="text-3xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-vanta-ivory">
-              SYSTEM <span className="text-vanta-lime">LINEUP</span>
+            <SectionBadge number="04" label="HARDWARE LINEUP" theme="light" />
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-vanta-dark">
+              SYSTEM <span className="text-vanta-dark underline decoration-vanta-lime decoration-4">LINEUP</span>
             </h2>
-            <p className="text-base text-vanta-text-muted-light font-sans max-w-xl">
-              Three hand-benched hardware tiers configured around frame rates, target resolution, and workstation memory capacity. Select a system to inspect hardware parameters.
+            <p className="text-base text-vanta-text-body font-sans max-w-xl leading-relaxed">
+              Three hand-benched hardware tiers configured around frame rates, target resolution, and workstation memory capacity. Select a system tier to inspect hardware specifications.
             </p>
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex items-center gap-2 bg-vanta-charcoal p-1.5 rounded-sm border border-vanta-border self-start md:self-auto">
+          <div className="flex items-center gap-2 bg-vanta-cream p-1.5 rounded-sm border border-vanta-sand self-start md:self-auto shadow-sm">
             {(['All', 'Core', 'Pro', 'Ultra'] as const).map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedFilter(category)}
-                className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
+                className={`px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
                   selectedFilter === category
-                    ? 'bg-vanta-lime text-vanta-dark font-bold'
-                    : 'text-vanta-text-muted-light hover:text-vanta-ivory'
+                    ? 'bg-vanta-dark text-vanta-lime font-bold'
+                    : 'text-vanta-text-body hover:text-vanta-dark font-semibold'
                 }`}
               >
                 {category === 'All' ? 'ALL RIGS' : category}
@@ -99,11 +99,11 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
           subtitle={`FULL HARDWARE SPECIFICATION // ${activeModalSystem.category.toUpperCase()} TIER`}
         >
           <div className="space-y-6">
-            <div className="p-4 bg-vanta-dark border border-vanta-border rounded-sm">
+            <div className="p-4 bg-vanta-dark border border-vanta-border rounded-sm text-vanta-ivory">
               <span className="font-mono text-[10px] text-vanta-lime uppercase tracking-widest block mb-1 font-bold">
                 SYSTEM SUMMARY
               </span>
-              <p className="font-sans text-xs text-vanta-ivory">
+              <p className="font-sans text-xs text-vanta-ivory leading-relaxed">
                 {activeModalSystem.description}
               </p>
             </div>

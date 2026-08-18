@@ -46,7 +46,7 @@ export const App: React.FC = () => {
           />
         </motion.div>
 
-        {/* Section 02: Product Showcase (Dark Charcoal) */}
+        {/* Section 02: Product Showcase (Dark Charcoal Contrast) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -56,7 +56,7 @@ export const App: React.FC = () => {
           <ProductShowcase />
         </motion.div>
 
-        {/* Section 03: Thermal & Structural Engineering (Light Stone) */}
+        {/* Section 03: Thermal & Structural Engineering (Light Soft Beige) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -66,7 +66,7 @@ export const App: React.FC = () => {
           <Engineering />
         </motion.div>
 
-        {/* Section 04: System Lineup (Dark Charcoal) */}
+        {/* Section 04: System Lineup (Light Warm Ivory) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -76,7 +76,7 @@ export const App: React.FC = () => {
           <SystemsLineup onConfigureSystem={() => scrollToSection('build')} />
         </motion.div>
 
-        {/* Section 05: Build CTA (Soft Cream) */}
+        {/* Section 05: Build CTA (Light Soft Cream) */}
         <motion.div
           initial="hidden"
           whileInView="visible"

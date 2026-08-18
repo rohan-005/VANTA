@@ -26,9 +26,9 @@ export const BuildCTA: React.FC = () => {
 
       <div className="w-full gutter-padding relative z-10">
         
-        <div className="bg-vanta-ivory border border-vanta-sand rounded-sm p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative overflow-hidden shadow-card-sharp">
+        <div className="bg-vanta-ivory border border-vanta-sand rounded-sm p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative overflow-hidden shadow-card-warm">
           
-          {/* Top Corner Decorative Marker */}
+          {/* Top Corner Marker */}
           <div className="absolute top-0 left-0 w-32 h-1.5 bg-vanta-dark" />
 
           {/* Left Column: Headline & Interactive Config Teaser */}
@@ -37,10 +37,10 @@ export const BuildCTA: React.FC = () => {
 
             <h2 className="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight text-vanta-dark leading-[0.95]">
               YOUR GAME. <br />
-              <span className="text-vanta-dark underline decoration-vanta-lime decoration-4">YOUR BUILD.</span>
+              <span className="text-vanta-dark border-b-4 border-vanta-lime pb-1">YOUR BUILD.</span>
             </h2>
 
-            <p className="text-base text-vanta-text-muted-dark font-sans leading-relaxed">
+            <p className="text-base text-vanta-text-body font-sans leading-relaxed">
               Configure a hand-benched gaming system tuned specifically for your monitor's refresh rate and target frame times.
             </p>
 
@@ -49,36 +49,36 @@ export const BuildCTA: React.FC = () => {
               
               {/* Target Resolution Selector */}
               <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-vanta-text-muted-dark font-bold block mb-2">
+                <span className="font-mono text-xs uppercase tracking-wider text-vanta-text-body font-bold block mb-2">
                   01 // SELECT TARGET RESOLUTION
                 </span>
                 <div className="grid grid-cols-3 gap-2">
                   <button
                     onClick={() => setResolution('1440p')}
-                    className={`px-3 py-2 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
+                    className={`px-3 py-2.5 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
                       resolution === '1440p'
-                        ? 'bg-vanta-dark text-vanta-lime border-vanta-dark font-bold'
-                        : 'bg-vanta-cream text-vanta-text-muted-dark border-vanta-sand hover:border-vanta-dark'
+                        ? 'bg-vanta-dark text-vanta-lime border-vanta-dark font-bold shadow-sm'
+                        : 'bg-vanta-cream text-vanta-text-body border-vanta-sand hover:border-vanta-dark font-semibold'
                     }`}
                   >
                     1440P HIGH-FPS
                   </button>
                   <button
                     onClick={() => setResolution('4k')}
-                    className={`px-3 py-2 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
+                    className={`px-3 py-2.5 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
                       resolution === '4k'
-                        ? 'bg-vanta-dark text-vanta-lime border-vanta-dark font-bold'
-                        : 'bg-vanta-cream text-vanta-text-muted-dark border-vanta-sand hover:border-vanta-dark'
+                        ? 'bg-vanta-dark text-vanta-lime border-vanta-dark font-bold shadow-sm'
+                        : 'bg-vanta-cream text-vanta-text-body border-vanta-sand hover:border-vanta-dark font-semibold'
                     }`}
                   >
                     4K COMPETITIVE
                   </button>
                   <button
                     onClick={() => setResolution('4k-extreme')}
-                    className={`px-3 py-2 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
+                    className={`px-3 py-2.5 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
                       resolution === '4k-extreme'
-                        ? 'bg-vanta-dark text-vanta-lime border-vanta-dark font-bold'
-                        : 'bg-vanta-cream text-vanta-text-muted-dark border-vanta-sand hover:border-vanta-dark'
+                        ? 'bg-vanta-dark text-vanta-lime border-vanta-dark font-bold shadow-sm'
+                        : 'bg-vanta-cream text-vanta-text-body border-vanta-sand hover:border-vanta-dark font-semibold'
                     }`}
                   >
                     4K EXTREME
@@ -88,36 +88,36 @@ export const BuildCTA: React.FC = () => {
 
               {/* Workload Selector */}
               <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-vanta-text-muted-dark font-bold block mb-2">
+                <span className="font-mono text-xs uppercase tracking-wider text-vanta-text-body font-bold block mb-2">
                   02 // PRIMARY WORKLOAD
                 </span>
                 <div className="grid grid-cols-3 gap-2">
                   <button
                     onClick={() => setWorkload('esports')}
-                    className={`px-3 py-2 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
+                    className={`px-3 py-2.5 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
                       workload === 'esports'
                         ? 'bg-vanta-stone text-vanta-dark border-vanta-dark font-bold'
-                        : 'bg-vanta-cream text-vanta-text-muted-dark border-vanta-sand'
+                        : 'bg-vanta-cream text-vanta-text-body border-vanta-sand font-semibold'
                     }`}
                   >
                     ESPORTS / LOW LATENCY
                   </button>
                   <button
                     onClick={() => setWorkload('gaming')}
-                    className={`px-3 py-2 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
+                    className={`px-3 py-2.5 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
                       workload === 'gaming'
                         ? 'bg-vanta-stone text-vanta-dark border-vanta-dark font-bold'
-                        : 'bg-vanta-cream text-vanta-text-muted-dark border-vanta-sand'
+                        : 'bg-vanta-cream text-vanta-text-body border-vanta-sand font-semibold'
                     }`}
                   >
                     AAA RAYTRACING
                   </button>
                   <button
                     onClick={() => setWorkload('creation')}
-                    className={`px-3 py-2 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
+                    className={`px-3 py-2.5 text-xs font-mono uppercase tracking-wider rounded-sm border transition-colors ${
                       workload === 'creation'
                         ? 'bg-vanta-stone text-vanta-dark border-vanta-dark font-bold'
-                        : 'bg-vanta-cream text-vanta-text-muted-dark border-vanta-sand'
+                        : 'bg-vanta-cream text-vanta-text-body border-vanta-sand font-semibold'
                     }`}
                   >
                     CREATOR & AI
@@ -141,8 +141,8 @@ export const BuildCTA: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Dynamic Recommended System Preview Box */}
-          <div className="lg:col-span-5 bg-vanta-dark text-vanta-ivory border border-vanta-dark rounded-sm p-6 space-y-4 relative shadow-xl">
+          {/* Right Column: Recommended System Preview Box */}
+          <div className="lg:col-span-5 bg-vanta-dark text-vanta-ivory border border-vanta-dark rounded-sm p-6 space-y-4 relative shadow-card-dark">
             <div className="flex items-center justify-between pb-3 border-b border-vanta-border">
               <span className="font-mono text-xs text-vanta-lime uppercase tracking-widest flex items-center gap-1.5 font-bold">
                 <span className="w-1.5 h-1.5 rounded-full bg-vanta-lime animate-pulse" />

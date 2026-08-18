@@ -7,8 +7,8 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative w-full bg-vanta-charcoal border-t border-vanta-border text-vanta-text-muted-light overflow-hidden">
-      {/* Background Subtle Grid Pattern */}
+    <footer className="relative w-full bg-vanta-dark border-t border-vanta-border text-vanta-text-muted-light overflow-hidden">
+      {/* Background Subtle Line Grid */}
       <div className="absolute inset-0 bg-line-grid-dark opacity-20 pointer-events-none" />
 
       <div className="w-full gutter-padding py-16 relative z-10 space-y-12">
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
           {/* Brand Column (4 Cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-vanta-dark border border-vanta-lime flex items-center justify-center rounded-sm">
+              <div className="w-8 h-8 bg-vanta-charcoal border border-vanta-lime flex items-center justify-center rounded-sm">
                 <span className="font-display font-extrabold text-lg text-vanta-lime">V</span>
               </div>
               <span className="font-display font-extrabold text-2xl tracking-wider text-vanta-ivory">
@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
               Premium gaming systems engineered for players who care about thermal performance, design integrity, and the experience of owning exceptional hardware.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-vanta-dark border border-vanta-border rounded-sm font-mono text-[11px] text-vanta-ivory">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-vanta-charcoal border border-vanta-border rounded-sm font-mono text-[11px] text-vanta-ivory">
               <span className="w-2 h-2 rounded-full bg-vanta-lime animate-pulse" />
               <span>VANTA LABS // ONLINE & OPERATIONAL</span>
             </div>
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             {/* Column 01: Systems */}
             <div className="space-y-3">
               <h4 className="font-mono text-xs uppercase tracking-widest text-vanta-ivory font-bold">
-                [ SYSTEMS ]
+                SYSTEMS
               </h4>
               <ul className="space-y-2 font-sans text-xs">
                 <li><a href="#systems" className="hover:text-vanta-lime transition-colors">VANTA CORE</a></li>
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
             {/* Column 02: Technology */}
             <div className="space-y-3">
               <h4 className="font-mono text-xs uppercase tracking-widest text-vanta-ivory font-bold">
-                [ TECH ]
+                TECH
               </h4>
               <ul className="space-y-2 font-sans text-xs">
                 <li><a href="#engineering" className="hover:text-vanta-lime transition-colors">Dual-Chamber Ducting</a></li>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
             {/* Column 03: Support */}
             <div className="space-y-3">
               <h4 className="font-mono text-xs uppercase tracking-widest text-vanta-ivory font-bold">
-                [ SUPPORT ]
+                SUPPORT
               </h4>
               <ul className="space-y-2 font-sans text-xs">
                 <li className="hover:text-vanta-lime transition-colors cursor-pointer">3-Year Warranty</li>
@@ -82,24 +82,24 @@ export const Footer: React.FC = () => {
             {/* Column 04: Connect */}
             <div className="space-y-3">
               <h4 className="font-mono text-xs uppercase tracking-widest text-vanta-ivory font-bold">
-                [ CONNECT ]
+                CONNECT
               </h4>
               <div className="flex items-center gap-3 pt-1">
                 <button
                   aria-label="Instagram Placeholder"
-                  className="p-2 bg-vanta-dark border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm transition-colors"
+                  className="p-2 bg-vanta-charcoal border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
                 </button>
                 <button
                   aria-label="YouTube Placeholder"
-                  className="p-2 bg-vanta-dark border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm transition-colors"
+                  className="p-2 bg-vanta-charcoal border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm transition-colors"
                 >
                   <Youtube className="w-4 h-4" />
                 </button>
                 <button
                   aria-label="GitHub Repository"
-                  className="p-2 bg-vanta-dark border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm transition-colors"
+                  className="p-2 bg-vanta-charcoal border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm transition-colors"
                 >
                   <Github className="w-4 h-4" />
                 </button>
@@ -124,7 +124,7 @@ export const Footer: React.FC = () => {
             <span className="hover:text-vanta-lime cursor-pointer">TERMS OF SALE</span>
             <button
               onClick={scrollToTop}
-              className="px-3 py-1 bg-vanta-dark border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm flex items-center gap-1 transition-colors"
+              className="px-3 py-1 bg-vanta-charcoal border border-vanta-border hover:border-vanta-lime hover:text-vanta-lime rounded-sm flex items-center gap-1 transition-colors"
             >
               TOP <ArrowUp className="w-3.5 h-3.5" />
             </button>
