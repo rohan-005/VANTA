@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wind, Flame, Thermometer, ShieldCheck, Play, Pause } from 'lucide-react';
+import { Thermometer, Play, Pause } from 'lucide-react';
 import { THERMAL_FEATURES } from '../../data/systems';
 
 export const CoolingVisualizer: React.FC = () => {

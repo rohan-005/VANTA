@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, ShieldCheck, ArrowRight, Layers, Zap } from 'lucide-react';
+import { Cpu, ArrowRight } from 'lucide-react';
 import { System } from '../../types';
 import { Button } from '../ui/Button';
 

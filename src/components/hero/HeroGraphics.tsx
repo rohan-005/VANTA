@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Eye, Flame, RotateCcw } from 'lucide-react';
+import { Eye, Flame } from 'lucide-react';
 
 export const HeroGraphics: React.FC = () => {
   const [thermalMode, setThermalMode] = useState(false);

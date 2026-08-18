@@ -6,17 +6,17 @@ import { Engineering } from './components/sections/Engineering';
 import { SystemsLineup } from './components/sections/SystemsLineup';
 import { BuildCTA } from './components/sections/BuildCTA';
 import { Footer } from './components/layout/Footer';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, Variants } from 'framer-motion';
 
 export const App: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
 
-  const sectionVariants = {
+  const sectionVariants: Variants = {
     hidden: { opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: 'easeOut' },
+      transition: { duration: 0.5 },
     },
   };
 

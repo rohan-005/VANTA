@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Sliders, Monitor, Cpu, Check, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { SectionBadge } from '../ui/SectionBadge';
 import { VANTA_SYSTEMS } from '../../data/systems';

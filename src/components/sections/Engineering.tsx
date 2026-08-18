@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Cpu, Wind, Layers, ArrowUpRight, Check } from 'lucide-react';
+import { Shield, Wind, Layers } from 'lucide-react';
 import { SectionBadge } from '../ui/SectionBadge';
 import { CoolingVisualizer } from '../product/CoolingVisualizer';
 

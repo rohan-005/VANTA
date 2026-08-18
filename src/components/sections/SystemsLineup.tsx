@@ -4,7 +4,7 @@ import { System, SystemCategory } from '../../types';
 import { SectionBadge } from '../ui/SectionBadge';
 import { SystemCard } from '../product/SystemCard';
 import { Modal } from '../ui/Modal';
-import { Cpu, ShieldCheck, Zap, HardDrive, Thermometer, Box } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 import { SpecPill } from '../ui/SpecPill';
 
 export interface SystemsLineupProps {
