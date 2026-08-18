@@ -16,12 +16,12 @@ export const Engineering: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-start space-y-4">
-          <SectionBadge number="03" label="THERMAL & STRUCTURAL ENGINEERING" theme="light" />
+          <SectionBadge number="03" label="THERMAL & AIRFLOW ENGINEERING" theme="light" />
           <h2 className="text-3xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-vanta-dark">
-            ENGINEERED FOR <span className="text-vanta-dark underline decoration-vanta-lime decoration-4">STABILITY</span>
+            ENGINEERED FOR <span className="text-vanta-dark underline decoration-vanta-lime decoration-4">GAMING STABILITY</span>
           </h2>
           <p className="text-base text-vanta-text-body font-sans max-w-2xl leading-relaxed">
-            Sustained high performance requires thermal management that scales linearly with silicon wattage. Here is how VANTA systems prevent thermal throttling under heavy 4K gaming and rendering.
+            Sustained high performance requires thermal management that scales linearly with silicon wattage. Here is how VANTA gaming desktops eliminate thermal throttling under sustained 4K gaming and heavy creative workloads.
           </p>
         </div>
 

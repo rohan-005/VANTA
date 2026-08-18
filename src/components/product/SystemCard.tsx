@@ -122,7 +122,7 @@ export const SystemCard: React.FC<SystemCardProps> = ({
         </div>
       </div>
 
-      {/* Pricing & CTAs */}
+      {/* Pricing & Action Buttons */}
       <div className="space-y-4 pt-4 border-t border-vanta-sand">
         <div className="flex items-baseline justify-between">
           <span className="font-mono text-xs text-vanta-text-body">STARTING AT</span>
@@ -139,7 +139,7 @@ export const SystemCard: React.FC<SystemCardProps> = ({
             icon={<ArrowRight className="w-3.5 h-3.5" />}
             className="w-full text-[11px]"
           >
-            CONFIGURE
+            CONFIGURE RIG
           </Button>
 
           <Button

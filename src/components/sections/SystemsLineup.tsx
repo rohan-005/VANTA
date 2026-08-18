@@ -47,12 +47,12 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
         {/* Section Header & Tier Filter */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4">
-            <SectionBadge number="04" label="HARDWARE LINEUP" theme="light" />
+            <SectionBadge number="04" label="PRE-CONFIGURED GAMING SYSTEMS" theme="light" />
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-vanta-dark">
-              SYSTEM <span className="text-vanta-dark underline decoration-vanta-lime decoration-4">LINEUP</span>
+              GAMING SYSTEM <span className="text-vanta-dark underline decoration-vanta-lime decoration-4">LINEUP</span>
             </h2>
             <p className="text-base text-vanta-text-body font-sans max-w-xl leading-relaxed">
-              Three hand-benched hardware tiers configured around frame rates, target resolution, and workstation memory capacity. Select a system tier to inspect hardware specifications.
+              Three hand-benched gaming tiers configured around target frame rates, 1440p / 4K gaming resolution, and workstation memory capacity. Select a system tier below.
             </p>
           </div>
 
@@ -68,7 +68,7 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
                     : 'text-vanta-text-body hover:text-vanta-dark font-semibold'
                 }`}
               >
-                {category === 'All' ? 'ALL RIGS' : category}
+                {category === 'All' ? 'ALL GAMING RIGS' : category}
               </button>
             ))}
           </div>
@@ -96,12 +96,12 @@ export const SystemsLineup: React.FC<SystemsLineupProps> = ({
           isOpen={!!activeModalSystem}
           onClose={() => setActiveModalSystem(null)}
           title={activeModalSystem.name}
-          subtitle={`FULL HARDWARE SPECIFICATION // ${activeModalSystem.category.toUpperCase()} TIER`}
+          subtitle={`GAMING SPECIFICATION // ${activeModalSystem.category.toUpperCase()} TIER`}
         >
           <div className="space-y-6">
             <div className="p-4 bg-vanta-dark border border-vanta-border rounded-sm text-vanta-ivory">
               <span className="font-mono text-[10px] text-vanta-lime uppercase tracking-widest block mb-1 font-bold">
-                SYSTEM SUMMARY
+                GAMING RIG SUMMARY
               </span>
               <p className="font-sans text-xs text-vanta-ivory leading-relaxed">
                 {activeModalSystem.description}

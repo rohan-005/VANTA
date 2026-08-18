@@ -33,7 +33,7 @@ export const BuildCTA: React.FC = () => {
 
           {/* Left Column: Headline & Interactive Config Teaser */}
           <div className="lg:col-span-7 space-y-6">
-            <SectionBadge number="05" label="CUSTOM HARDWARE CONFIGURATOR" theme="light" />
+            <SectionBadge number="05" label="BUILD YOUR CUSTOM GAMING PC" theme="light" />
 
             <h2 className="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight text-vanta-dark leading-[0.95]">
               YOUR GAME. <br />
@@ -41,7 +41,7 @@ export const BuildCTA: React.FC = () => {
             </h2>
 
             <p className="text-base text-vanta-text-body font-sans leading-relaxed">
-              Configure a hand-benched gaming system tuned specifically for your monitor's refresh rate and target frame times.
+              Configure a hand-benched gaming system tuned specifically for your monitor's resolution, frame rates, and cooling requirements.
             </p>
 
             {/* Configurator Teaser Selector Matrix */}
@@ -136,7 +136,7 @@ export const BuildCTA: React.FC = () => {
                 icon={<ArrowRight className="w-4 h-4 text-vanta-dark" />}
                 className="w-full sm:w-auto shadow-md"
               >
-                START CUSTOM CONFIGURATION →
+                START CUSTOM BUILD →
               </Button>
             </div>
           </div>
@@ -146,7 +146,7 @@ export const BuildCTA: React.FC = () => {
             <div className="flex items-center justify-between pb-3 border-b border-vanta-border">
               <span className="font-mono text-xs text-vanta-lime uppercase tracking-widest flex items-center gap-1.5 font-bold">
                 <span className="w-1.5 h-1.5 rounded-full bg-vanta-lime animate-pulse" />
-                RECOMMENDED MATCH
+                RECOMMENDED GAMING RIG
               </span>
               <span className="font-mono text-[10px] text-vanta-text-muted-light uppercase">
                 PREVIEW

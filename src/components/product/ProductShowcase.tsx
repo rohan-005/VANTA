@@ -39,12 +39,12 @@ export const ProductShowcase: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-start space-y-4 mb-12">
-          <SectionBadge number="02" label="PRODUCT SHOWCASE" theme="dark" />
+          <SectionBadge number="02" label="GAMING HARDWARE SHOWCASE" theme="dark" />
           <h2 className="text-3xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-vanta-ivory">
-            THE <span className="text-vanta-lime">HARDWARE</span>
+            THE GAMING <span className="text-vanta-lime">MACHINES</span>
           </h2>
           <p className="text-base text-vanta-text-muted-light font-sans max-w-2xl leading-relaxed">
-            Select an engineering domain below to inspect how component selection, chassis structural design, and liquid cooling interact.
+            Inspect component selection, thermal ducting, and chassis craft across our flagship gaming platforms.
           </p>
         </div>
 
