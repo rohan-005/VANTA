@@ -6,12 +6,13 @@
 
 ### 1. Why This Design Approach?
 
-The design approach for **VANTA** rejects generic cyberpunk clichés, rainbow RGB lighting, and fake marketing banners in favor of an **engineered luxury hardware aesthetic** inspired by enthusiast PC engineering and luxury automotive design.
+The design approach for **VANTA** rejects generic cyberpunk clichés, dark RGB templates, and blue neon lighting in favor of an **editorial luxury hardware aesthetic** inspired by enthusiast PC engineering and luxury automotive design.
 
-* **Obsidian & Acid Lime Palette**: We established a near-black base (`#070708` / `#0E1013`) with subtle 1px borders (`#222631`) to give hardware dominant visual weight. **Acid Lime (`#CCFF00`)** is used strictly as a high-contrast accent on CTAs, active tab indicators, and live status LEDs—avoiding neon oversaturation.
-* **Full-Width Viewport Execution**: Rather than trapping the website inside a narrow centered container with large unused side margins, all visual section backdrops, headers, and dividers stretch edge-to-edge (`100vw`), while internal readable content is constrained to `1440px`.
+* **Light Warm Base & Alternating Section Rhythm**: We established a primary foundation built on Warm Ivory (`#F3F0E7`), Soft Cream (`#F8F6F0`), and Light Stone (`#E8E3D7`), alternating with Deep Charcoal (`#171817` / `#242522`) hardware inspection zones. This creates visual rhythm, contrast, and prevents dark visual fatigue.
+* **Strict Zero-Blue Policy**: We strictly eliminated all blue, cyan, navy, blue glows, blue borders, and blue airflow lines. Cold intake vectors in thermal diagrams use **Emerald Green (`#00FF99`)**, while exhaust vectors use **Warm Burnt Orange (`#E86F2D`)**.
+* **100% Viewport Width Execution**: All section backdrops, headers, and dividers stretch edge-to-edge across the screen (`100vw`). Internal readable content uses responsive gutter padding (`px-5 sm:px-10 lg:px-16 xl:px-20`), eliminating giant wasted side margins.
 * **Engineered Corner Geometry**: We enforced sharp 0px to 4px corner radii (`rounded-sm`). Bubbly `rounded-3xl` cards were rejected because soft rounded shapes cheapen industrial hardware perception.
-* **Typographic Hierarchy**: Bold uppercase display typography (`Rajdhani`) commands headlines and product models, monospace (`JetBrains Mono`) handles bracketed metadata tags (`[ SYS_01 ]`), and clean sans-serif (`Inter`) delivers high-legibility body descriptions and hardware specifications.
+* **Typographic Hierarchy**: Bold display typography (`Rajdhani`) commands headlines and product models, monospace (`JetBrains Mono`) handles bracketed metadata tags (`[ SYS_01 ]`), and clean sans-serif (`Inter`) delivers high-legibility body descriptions and hardware specifications.
 
 ---
 
@@ -32,8 +33,8 @@ In accordance with transparent engineering principles, AI was utilized as a pair
 * **What AI Helped With**:
   * Generating initial PRD, AGENTS, and RULES documentation templates.
   * Assisting with SVG coordinate math for the interactive dual-chamber thermal vector visualization.
-  * Scaffolding initial Tailwind CSS token mappings and TypeScript interface declarations.
+  * Scaffolding Tailwind CSS token mappings and TypeScript interface declarations.
 * **What Was Manually Verified & Refined**:
-  * **Visual Polish & Spacing**: Manually adjusted padding, border contrast, font tracking, and full-width layout reflows across 390px, 768px, 1024px, and 1440px breakpoints.
-  * **Content Integrity Audit**: Verified that all hardware specifications (Intel Core i9-14900KS, RTX 4090, DDR5-6800, PCIe Gen5) are realistic and honest, removing any placeholder text or fabricated user counts.
-  * **TypeScript & Build Verification**: Manually corrected Framer Motion variant types and removed unused imports to ensure `tsc -b && vite build` compiles cleanly with zero warnings or errors.
+  * **Visual Polish & Zero Blue Audit**: Personally audited every component to verify 100% removal of blue tones, replacing them with warm ivory, charcoal, acid lime (`#B8E600`), and burnt orange (`#E86F2D`).
+  * **100% Width & Responsive Gutter Strategy**: Manually adjusted padding, border contrast, font tracking, and full-width layout reflows across 390px, 768px, 1024px, and 1440px breakpoints.
+  * **TypeScript & Build Verification**: Personally ran `tsc -b && vite build` to ensure zero warnings or errors.
