@@ -16,55 +16,55 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section
       id="hero"
-      className="relative w-full min-h-[92vh] pt-28 pb-16 lg:pt-36 lg:pb-24 bg-vanta-ivory border-b border-vanta-sand overflow-hidden flex flex-col justify-between"
+      className="relative w-full min-h-[90vh] pt-28 pb-16 lg:pt-36 lg:pb-24 bg-vanta-ivory border-b border-vanta-sand overflow-hidden flex flex-col justify-between"
     >
-      {/* Background Subtle Line Grid */}
+      {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-line-grid-subtle opacity-40 pointer-events-none" />
 
-      {/* Radial Accent Glow (Warm Ivory to Soft Cream glow) */}
+      {/* Radial Soft Accent Glow */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-b from-vanta-lime/10 via-vanta-cream to-transparent blur-3xl pointer-events-none" />
 
       <div className="w-full gutter-padding relative z-10 my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Bold Editorial Brand Typography */}
+          {/* Left Column: Bold Dark Editorial Typography */}
           <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
             
-            {/* Top Technical Section Badge */}
+            {/* Clean Section Badge */}
             <SectionBadge number="01" label="PRECISION HARDWARE ARCHITECTURE" theme="light" />
 
-            {/* Dominant Display Headline */}
+            {/* Dominant Dark Charcoal Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold uppercase tracking-tight text-vanta-dark leading-[0.95]">
-              BUILT WITHOUT <br />
-              <span className="text-vanta-dark underline decoration-vanta-lime decoration-4 underline-offset-8">
-                COMPROMISE.
+              BUILT <br />
+              <span className="text-vanta-dark border-b-4 border-vanta-lime pb-1">
+                DIFFERENT.
               </span>
             </h1>
 
-            {/* Editorial Product Positioning Subtitle */}
-            <p className="text-base sm:text-lg text-vanta-text-muted-dark font-sans max-w-2xl leading-relaxed">
-              Premium gaming desktops engineered for players who care about thermal stability, acoustic discipline, and the luxury of owning hand-benched hardware.
+            {/* Editorial Subtitle */}
+            <p className="text-base sm:text-lg text-vanta-text-body font-sans max-w-xl leading-relaxed">
+              Performance engineered without compromise. Built for players who demand unyielding thermal stability, acoustic discipline, and exceptional hardware craft.
             </p>
 
-            {/* CTAs */}
+            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto">
               <Button
                 variant="primary"
                 size="lg"
-                onClick={onConfigureClick}
+                onClick={onExploreClick}
                 icon={<ArrowRight className="w-4 h-4 text-vanta-dark" />}
                 className="w-full sm:w-auto shadow-md"
               >
-                BUILD YOUR SYSTEM
+                EXPLORE SYSTEMS
               </Button>
 
               <Button
                 variant="secondary"
                 size="lg"
-                onClick={onExploreClick}
+                onClick={onConfigureClick}
                 className="w-full sm:w-auto"
               >
-                VIEW SHOWCASE
+                CUSTOM BUILDER
               </Button>
             </div>
 
@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="font-mono text-[11px] uppercase tracking-wider text-vanta-dark font-bold">
                     SUB-35°C AMBIENT
                   </div>
-                  <div className="font-sans text-xs text-vanta-text-muted-dark">
+                  <div className="font-sans text-xs text-vanta-text-body">
                     Dual-Chamber Flow
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="font-mono text-[11px] uppercase tracking-wider text-vanta-dark font-bold">
                     UNTHROTTLED
                   </div>
-                  <div className="font-sans text-xs text-vanta-text-muted-dark">
+                  <div className="font-sans text-xs text-vanta-text-body">
                     Hand-Benched Silicon
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="font-mono text-[11px] uppercase tracking-wider text-vanta-dark font-bold">
                     72-HR BENCHED
                   </div>
-                  <div className="font-sans text-xs text-vanta-text-muted-dark">
+                  <div className="font-sans text-xs text-vanta-text-body">
                     Flight-Crate Protection
                   </div>
                 </div>
@@ -124,8 +124,8 @@ export const Hero: React.FC<HeroProps> = ({
       </div>
 
       {/* Bottom Scroll Anchor Prompt */}
-      <div className="w-full gutter-padding pt-8 hidden sm:flex items-center justify-between text-vanta-text-muted-dark border-t border-vanta-sand mt-8">
-        <div className="font-mono text-[11px] uppercase tracking-widest flex items-center gap-2 font-semibold">
+      <div className="w-full gutter-padding pt-8 hidden sm:flex items-center justify-between text-vanta-text-body border-t border-vanta-sand mt-8">
+        <div className="font-mono text-[11px] uppercase tracking-widest flex items-center gap-2 font-bold">
           <span className="w-2 h-2 rounded-full bg-vanta-dark animate-ping" />
           <span className="text-vanta-dark">VANTA LABS // CHASSIS 01 FLAGSHIP</span>
         </div>
@@ -133,7 +133,7 @@ export const Hero: React.FC<HeroProps> = ({
           onClick={onExploreClick}
           className="font-mono text-[11px] uppercase tracking-widest hover:text-vanta-dark flex items-center gap-1 transition-colors font-bold"
         >
-          SCROLL TO EXPLORE <ChevronDown className="w-3.5 h-3.5 animate-bounce" />
+          SCROLL TO DISCOVER <ChevronDown className="w-3.5 h-3.5 animate-bounce" />
         </button>
       </div>
     </section>
